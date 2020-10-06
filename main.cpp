@@ -1,34 +1,13 @@
 #include <iostream>
 using namespace std;
 struct vox{
-    String nombre;
-    String apellido;
-    int expediente;
-    date *cumple;
+    int v;
     vox *sgt;
 };
-
-struct date{
-    int dia;
-    int mes;
-    int año;
-    date *next;
-};
-date *aux_peek;
 vox *peek = NULL;
-void push(String nombre; String apellido; int expediente;int dia;int mes;int año;){
+void push(int x){
    vox *nvox =  new vox;
-   nvox->nombre= "Victor";
-   nvox->apellido= "Perez";
-   nvox->expediente= 19;
-
-   date *ndate = new date;
-   ndate->dia=17;
-   ndate->mes=7;
-   ndate->año=2001;
-
-   nvox->sgt=peek;
-   ndate->next=aux_peek;
+   nvox->v=x,nvox->sgt=peek;
    peek=nvox;
 }
 void pop(){
@@ -48,7 +27,6 @@ void prt(){
          }
 }
 int main(){
-
     int op, x;
     do{
         cout<<"\n(1) Push    (2) Pop    (3) Print   (4) Salir \n ";
